@@ -31,42 +31,12 @@ const teamD = {
   ],
 };
 
-const allTeams = [teamA, teamB, teamC, teamD];
+const teams = [teamA, teamB, teamC, teamD];
 
-console.log(allTeams);
+console.log(teams);
 
-//ACTIONS
 
-const getTeamNames = (teams) => teams.map((team) => team.teamName);
+export {teams}
 
-const getHowManyTeams = (teams) => teams.length;
 
-const getTeamPlayersFirstName = (team) =>
-  team.players.map((player) => player.firstName);
 
-console.log("getTeamNames:", getTeamNames(allTeams));
-console.log("getHowManyTeams:", getHowManyTeams(allTeams));
-console.log("getTeamPlayersFirstName:", getTeamPlayersFirstName(teamA));
-
-//STATISTICS
-const teamsRanking = {
-  first: "teamA",
-  second: "teamD",
-  third: "teamC",
-  fourth: "teamB",
-};
-
-const scores = {
-  teamA: 12,
-  teamD: 9,
-  teamC: 4,
-  teamB: 1,
-};
-
-//BEST TEAM
-const bestTeam = {
-  name: teamsRanking.first,
-  scores: scores.teamA,
-};
-
-console.log("bestTeam:", bestTeam);
